@@ -1,0 +1,43 @@
+<template>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 full-img"></div>
+        <div class="col-4">
+            <h1>Project-6</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit Obcaecati placeat ab Repellendus eligendi odit Lorem ipsum d
+
+            </p>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+</div>
+</template>
+
+<script>
+export default {
+    name: 'Projectsix',
+    mounted() {
+        let user = localStorage.getItem('user-info');
+        if (!user) {
+            this.$router.push({
+                name: 'Signin'
+            })
+        }
+    }
+}
+</script>
+
+<style scoped>
+.container-fluid {
+    text-align: justify;
+}
+
+.full-img {
+    background-image: url("../assets/p2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
